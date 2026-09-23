@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,13 +36,22 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex flex-col">
-          <span className="font-bebas text-2xl tracking-widest text-white leading-none">
-            BAGDOGRA
-          </span>
-          <span className="font-inter text-[0.65rem] font-bold tracking-[0.3em] text-orange-500 uppercase">
-            Bike Rentals
-          </span>
+        <a href="#" className="flex items-center gap-3">
+          <Image 
+            src="/logo.jpg" 
+            alt="Bagdogra Bike Rentals Logo" 
+            width={48} 
+            height={48} 
+            className="rounded-full shadow-lg"
+          />
+          <div className="flex flex-col">
+            <span className="font-bebas text-2xl tracking-widest text-white leading-none">
+              BAGDOGRA
+            </span>
+            <span className="font-inter text-[0.65rem] font-bold tracking-[0.3em] text-orange-500 uppercase mt-0.5">
+              Bike Rentals
+            </span>
+          </div>
         </a>
 
         {/* Desktop Links */}
