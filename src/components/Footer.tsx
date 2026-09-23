@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
+import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -11,22 +11,8 @@ export default function Footer() {
           
           {/* Brand */}
           <div className="flex flex-col">
-            <a href="#" className="flex items-center gap-3 mb-4">
-              <Image 
-                src="/logo.jpg" 
-                alt="Bagdogra Bike Rentals Logo" 
-                width={56} 
-                height={56} 
-                className="rounded-full shadow-lg"
-              />
-              <div className="flex flex-col">
-                <span className="font-bebas text-3xl tracking-widest text-white leading-none">
-                  BAGDOGRA
-                </span>
-                <span className="font-inter text-[0.7rem] font-bold tracking-[0.3em] text-orange-500 uppercase mt-0.5">
-                  Bike Rentals
-                </span>
-              </div>
+            <a href="#" className="flex items-center mb-6 hover:scale-105 transition-transform origin-left">
+              <Logo className="scale-150 ml-4" />
             </a>
             <p className="text-zinc-500 text-sm max-w-xs font-light">
               Premium bikes for unforgettable rides across North Bengal and the Himalayas.
